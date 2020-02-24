@@ -7,13 +7,12 @@ const main = function () {
         e.preventDefault();
         if (x < max_fields) { //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">X</a></div>'); //add input box
+            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">x</a></div>'); //add input box
         }
     });
 
     wrapper.on("click", ".remove_field", function (e) { //user click on remove text
         e.preventDefault(); $(this).parent('div').remove(); x--;
-       
     })
 }
 window.addEventListener('DOMContentLoaded', main);
