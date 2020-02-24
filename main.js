@@ -13,9 +13,7 @@ const main = function () {
 
     wrapper.on("click", ".remove_field", function (e) { //user click on remove text
         e.preventDefault(); $(this).parent('div').remove(); x--;
-        $('input[name="mytext[]"]').each(function (index) {
-            $(this).val(index + 1);
-        });
+       
     })
 }
 window.addEventListener('DOMContentLoaded', main);
