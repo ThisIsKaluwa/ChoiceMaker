@@ -1,5 +1,5 @@
 const main = function () {
-    var max_fields = 10; //maximum input boxes allowed
+    var max_fields = 5; //maximum input boxes allowed
     var wrapper = $(".input_fields_wrap"); //Fields wrapper
     var add_button = $(".add_field_button"); //Add button ID
     var x = 1; //initlal text box count
@@ -7,7 +7,7 @@ const main = function () {
         e.preventDefault();
         if (x < max_fields) { //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div><input type="text" name="mytext[]" value="' + x + '" /><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">X</a></div>'); //add input box
         }
     });
 
