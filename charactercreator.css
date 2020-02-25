@@ -1,12 +1,12 @@
 body{
-    background-color: lightgrey;
+    background-color: #5F4B8BFF;
 }
 
 
 h1{
-    color: black;
+    color: #E69A8DFF;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Tahoma, 'Times New Roman', Times, serif;
 }
 
 .grid-container {
@@ -17,7 +17,7 @@ h1{
     align-content: start;
     grid-template-columns: repeat(1, auto);
     grid-gap: 5px;
-    background-color:darkgray;
+    background-color: #E69A8DFF;
     padding: 10px;
     
   }
@@ -32,10 +32,19 @@ h1{
 #toptext{
     margin-left: 25%;
     font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #E69A8DFF;
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: #5F4B8BFF;
     font-weight: bold;
+    font-family: Tahoma, 'Times New Roman', Times, serif;
+}
+
+button{
+    background-color: rgb(240, 186, 176);
+    border-radius: 4px;
+
 }
