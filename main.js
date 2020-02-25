@@ -18,7 +18,18 @@ const main = function () {
 
     submit_button.click(function (f) {
         f.preventDefault();
-        console.log("This button was pressed");
+
+        var input_array = [
+             $("#first").val(),
+             $("#second").val()
+        ]
+
+        var result = Math.floor(Math.random()*input_array.length);
+        console.log(result);
+
+        document.getElementById("result").innerHTML = input_array[result]; 
+        
     })
 }
 window.addEventListener('DOMContentLoaded', main);
+
