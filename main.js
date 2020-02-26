@@ -8,7 +8,7 @@ const main = function () {
         e.preventDefault();
         if (x < max_fields) { //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">x</a></div>'); //add input box
+            $(wrapper).append('<div><input type="text" class="field" name="mytext[]"/><a href="#" class="remove_field">x</a></div>'); //add input box
         }
     });
 
@@ -19,15 +19,16 @@ const main = function () {
     submit_button.click(function (f) {
         f.preventDefault();
 
-        var input_array = [
-             $("#first").val(),
-             $("#second").val()
-        ]
+        parent = document.querySelector(".input_fields_wrap");
 
-        var result = Math.floor(Math.random()*input_array.length);
+        children = document.getElementsByClassName('field');
+        for(i = 0; i < children.length; i++){
+            console.log(children[i].innerHTML);
+        }
+        var result = Math.floor(Math.random()*children.length);
         console.log(result);
 
-        document.getElementById("result").innerHTML = input_array[result]; 
+        document.getElementById("result").innerHTML = children[result].value; 
         
     })
 }
